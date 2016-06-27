@@ -1,0 +1,5 @@
+settings.py
+*.pyc
+.ipynb_checkpoints/
+nohup.out
+data/corral_qai.db

@@ -1,0 +1,11 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+
+PASTEBIN = {
+    "api_dev_key": "",
+    "username": "",
+    "password": "",
+}
+
+from local_settings import *
