@@ -6,20 +6,10 @@ notebook:
 	jupyter notebook analysis.ipynb
 
 
-pastebin:
-	python corral_qai.py pastebin ||:
-
-
-gist:
-	python corral_qai.py gist ||:
-
-
-activestate:
-	python corral_qai.py activestate ||:
-
-
 retrieve: pastebin gist activestate
-	@echo done;
+	python corral_qai.py pastebin ||:
+	python corral_qai.py gist ||:
+	python corral_qai.py activestate ||:
 
 
 metrics:
@@ -31,7 +21,7 @@ export:
 	sqlite3 data/corral_qai.db '.dump' > data/corral_qai.sql;
 
 
-all: retrieve metrics export
+runAndStore: retrieve metrics export
 	echo "done";
-	#git commit -am "more data";
-	#git push origin master;
+	git commit -am "more data";
+	git push origin master;

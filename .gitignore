@@ -3,3 +3,4 @@ settings.py
 .ipynb_checkpoints/
 nohup.out
 data/corral_qai.db
+run.py
